@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>New Era Cleaning Services | San Diego, Los Angeles &amp; Las Vegas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F0F9F9; --surface:#FFFFFF; --surface-2:#E3F3F3; --text:#0C2B35; --muted:#47666F; --line:#C9E3E5;
+  --aqua:#12ADA6; --aqua-ink:#06635F; --deep:#0B3C49; --glove:#FFD23F; --on-deep:#EAF8F8;
+  --sd:#12ADA6; --la:#0B3C49; --lv:#F4B400;
+  --hero-a:#CFF1EE; --hero-b:#F0F9F9;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#071B23; --surface:#0E2F3B; --surface-2:#123B49; --text:#E4F5F5; --muted:#9BBBC2; --line:#1F4D5B;
+    --aqua:#35D4CB; --aqua-ink:#7EE8E1; --deep:#123B49; --on-deep:#E4F5F5;
+    --sd:#35D4CB; --la:#8FC9E0; --lv:#FFC93C;
+    --hero-a:#0F4552; --hero-b:#071B23;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#071B23; --surface:#0E2F3B; --surface-2:#123B49; --text:#E4F5F5; --muted:#9BBBC2; --line:#1F4D5B;
+  --aqua:#35D4CB; --aqua-ink:#7EE8E1; --deep:#123B49; --on-deep:#E4F5F5;
+  --sd:#35D4CB; --la:#8FC9E0; --lv:#FFC93C;
+  --hero-a:#0F4552; --hero-b:#071B23;
+  color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--aqua);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.brand i{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0 12%,transparent 13%),linear-gradient(135deg,var(--aqua),var(--deep));display:inline-block}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-weight:500;font-size:15px;align-items:center}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--glove);color:#3F3000;font-weight:600;text-decoration:none;border-radius:99px;padding:12px 26px;border:0;font-family:var(--body);font-size:16px;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+nav ul a.btn{color:#3F3000;padding:8px 20px;font-size:15px}
+@media(max-width:720px){nav ul li:not(:last-child){display:none}}
+@media(max-width:480px){.brand{font-size:16px}.brand i{width:18px;height:18px}nav ul a.btn{padding:8px 14px;font-size:14px}}
+
+.hero{background:radial-gradient(1200px 600px at 80% 10%,var(--hero-a),var(--hero-b) 70%);padding:72px 0 88px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,6.2vw,78px);font-weight:800}
+.hero p.lede{font-size:20px;color:var(--muted);max-width:30em;margin:24px 0 32px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px 18px}
+.stat b{font-family:var(--display);font-size:28px;display:block;line-height:1}
+.stat span{font-size:14px;color:var(--muted)}
+.bubbles{position:relative;height:480px}
+.bubble{position:absolute;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:2px solid color-mix(in srgb,#fff 70%,var(--aqua));
+  background:radial-gradient(circle at 28% 24%,rgba(255,255,255,.95) 0 6%,rgba(255,255,255,0) 7%),radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--surface) 55%,transparent),color-mix(in srgb,var(--aqua) 22%,transparent));
+  box-shadow:inset 0 0 40px color-mix(in srgb,var(--aqua) 35%,transparent),0 20px 50px -20px color-mix(in srgb,var(--deep) 45%,transparent);
+  text-decoration:none;color:var(--text);animation:bob 7s ease-in-out infinite;transition:transform .25s}
+.bubble:hover{transform:scale(1.05)}
+.bubble strong{font-family:var(--display);font-size:22px;line-height:1.1}
+.bubble .n{font-family:var(--display);font-weight:800;font-size:46px;line-height:1}
+.bubble small{color:var(--muted);font-size:14px}
+.b1{width:250px;height:250px;left:0;top:30px}
+.b2{width:230px;height:230px;right:0;top:0;animation-delay:-2s}
+.b3{width:265px;height:265px;left:26%;bottom:0;animation-delay:-4s}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -14px}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.bubbles{height:520px}.b2{top:20px}.b3{left:calc(50% - 130px)}}
+@media(max-width:480px){.b1,.b2{width:180px;height:180px}.b3{width:210px;height:210px;left:calc(50% - 105px)}.bubble .n{font-size:34px}.bubble strong{font-size:17px}.bubbles{height:470px}}
+
+section.s{padding:88px 0}
+section.alt{background:var(--surface-2)}
+.s h2{font-size:clamp(32px,4.4vw,52px);font-weight:800;max-width:16em}
+.s .intro{color:var(--muted);max-width:38em;margin:16px 0 40px;font-size:18px}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:28px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc h3{font-size:22px;line-height:1.15}
+.svc p{margin:10px 0 0;color:var(--muted);font-size:16px}
+.svc .mk{width:44px;height:44px;border-radius:50%;margin-bottom:18px;background:radial-gradient(circle at 30% 28%,#fff 0 9%,transparent 10%),linear-gradient(135deg,var(--aqua),var(--deep))}
+@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid3{grid-template-columns:1fr}}
+
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tab{font:600 16px var(--body);border:2px solid var(--line);background:var(--surface);color:var(--text);padding:10px 20px;border-radius:99px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--aqua);color:#04302D;border-color:var(--aqua)}
+.tab em{font-style:normal;opacity:.75;font-weight:500;margin-left:6px}
+.spec{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px 22px}
+.item h3{font-size:18px;line-height:1.25}
+.pills{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.pill{font-size:13px;font-weight:600;border-radius:99px;padding:3px 12px;background:var(--surface-2);color:var(--aqua-ink)}
+@media(max-width:760px){.spec{grid-template-columns:1fr}}
+
+.cities{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.city{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:32px;position:relative;overflow:hidden}
+.city::after{content:"";position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;background:var(--c);opacity:.22}
+.city h3{font-size:30px}
+.city .big{font-family:var(--display);font-weight:800;font-size:56px;line-height:1;margin-top:28px}
+.city p{margin:6px 0 20px;color:var(--muted)}
+.city a{font-weight:600;color:var(--aqua-ink)}
+@media(max-width:860px){.cities{grid-template-columns:1fr}}
+
+.sched{display:grid;grid-template-columns:.8fr 1.4fr;gap:40px;align-items:start}
+.sched .side p{color:var(--muted);font-size:18px;margin:16px 0 24px}
+.sched .side ul{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:10px;font-weight:500}
+.sched .side li::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--aqua);margin-right:12px}
+.formbox{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:12px;overflow:hidden}
+.formbox iframe{width:100%;height:1000px;border:0;border-radius:18px;background:#fff;display:block}
+@media(max-width:900px){.sched{grid-template-columns:1fr}}
+
+footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>New Era Cleaning Services</a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#specialty">Specialty</a></li>
+      <li><a href="#cities">Cities</a></li>
+      <li><a class="btn" href="#schedule">Schedule</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Professional cleaning in San Diego, Los Angeles and Las Vegas.</h1>
+      <p class="lede">From regular home visits to specialty restoration, see everything we clean, where we work, and schedule your service in minutes.</p>
+      <a class="btn" href="#schedule">Schedule a cleaning</a>
+      <div class="stats">
+        <div class="stat"><b>3</b><span>cities served</span></div>
+        <div class="stat"><b>6</b><span>core services</span></div>
+        <div class="stat"><b id="totalSvc">24</b><span>services in total</span></div>
+      </div>
+    </div>
+    <div class="bubbles" id="bubbles" aria-label="Cities we serve"></div>
+  </div>
+</header>
+
+<main>
+<section class="s" id="services">
+  <div class="wrap">
+    <h2>Core cleaning services</h2>
+    <p class="intro">Available in every city we serve, for homes and businesses.</p>
+    <div class="grid3" id="coreGrid"></div>
+  </div>
+</section>
+
+<section class="s alt" id="specialty">
+  <div class="wrap">
+    <h2>Specialty services</h2>
+    <p class="intro">Beyond the basics, we handle the harder jobs. Choose a city to see what is available there.</p>
+    <div class="tabs" role="tablist" aria-label="City" id="tabs"></div>
+    <div class="spec" id="specList" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="s" id="cities">
+  <div class="wrap">
+    <h2>Where we work</h2>
+    <p class="intro">Every city gets all six core services plus its own set of specialty work.</p>
+    <div class="cities" id="cityCards"></div>
+  </div>
+</section>
+
+<section class="s alt" id="schedule">
+  <div class="wrap sched">
+    <div class="side">
+      <h2>Schedule your service with New Era</h2>
+      <p>Fill out the form and tell us which city and service you need.</p>
+      <ul>
+        <li>San Diego, Los Angeles and Las Vegas</li>
+        <li>Homes and businesses</li>
+        <li>One-time and recurring visits</li>
+      </ul>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSejLBMinDpom0RCQ-TQOwYniH_-WK2lhpIaqsJ7MWdq2CR-ww/viewform" target="_blank" rel="noopener">Open the form in a new tab</a>
+    </div>
+    <div class="formbox">
+      <iframe title="Scheduling form" src="https://docs.google.com/forms/d/e/1FAIpQLSejLBMinDpom0RCQ-TQOwYniH_-WK2lhpIaqsJ7MWdq2CR-ww/viewform?embedded=true" loading="lazy">Loading form…</iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© New Era Cleaning Services. Serving San Diego, Los Angeles and Las Vegas.</div>
+</footer>
+
+<script>
+const cityList = [
+  {k:"sd",name:"San Diego",color:"var(--sd)"},
+  {k:"la",name:"Los Angeles",color:"var(--la)"},
+  {k:"lv",name:"Las Vegas",color:"var(--lv)"}
+];
+const core = [
+  ["Standard recurring house cleaning","Regular maintenance visits to keep your home fresh."],
+  ["Deep cleaning","A top-to-bottom clean, from baseboards to appliances."],
+  ["Move-in and move-out cleaning","Turnover cleaning for tenants, owners and buyers."],
+  ["Commercial office and janitorial","Ongoing upkeep for offices and work spaces."],
+  ["Short-term rental turnovers","Fast resets between guests for Airbnb and vacation rentals."],
+  ["Post-construction cleanup","Dust and debris removal after remodels and builds."]
+];
+const specialty = [
+  ["Tile and grout cleaning",["sd","la","lv"]],
+  ["Pet dander and allergy cleaning",["sd","la","lv"]],
+  ["Exterior pressure washing",["sd","la","lv"]],
+  ["Hard-floor stripping, waxing and polishing",["sd","la","lv"]],
+  ["Home organizing and decluttering",["sd","la"]],
+  ["Hoarding and severe clutter recovery",["sd","la"]],
+  ["Disinfecting and odor neutralizing",["sd","la"]],
+  ["Post-event and party cleanup",["sd","la"]],
+  ["Laundry and linen service",["la","lv"]],
+  ["Upholstery and fabric care",["la","lv"]],
+  ["Commercial oven hood cleaning",["sd"]],
+  ["Junk hauling and property cleanouts",["sd"]],
+  ["Specialized facilities: medical, dental, daycare, fitness, restaurant and warehouse",["sd"]],
+  ["Marine and yacht detailing",["la"]],
+  ["Gutter clearing",["la"]],
+  ["Biohazard, trauma and crime scene remediation",["la"]],
+  ["Window and blind washing",["la"]],
+  ["Mobile auto detailing",["lv"]]
+];
+const names = Object.fromEntries(cityList.map(c=>[c.k,c.name]));
+const countFor = k => core.length + specialty.filter(s=>s[1].includes(k)).length;
+document.getElementById("totalSvc").textContent = core.length + specialty.length;
+
+/* hero bubbles */
+const cls = ["b1","b2","b3"];
+document.getElementById("bubbles").innerHTML = cityList.map((c,i)=>
+  `<a class="bubble ${cls[i]}" href="#cities"><small>${c.name}</small><span class="n">${countFor(c.k)}</span><small>services</small></a>`).join("");
+
+/* core */
+document.getElementById("coreGrid").innerHTML = core.map(c=>
+  `<article class="card svc"><div class="mk"></div><h3>${c[0]}</h3><p>${c[1]}</p></article>`).join("");
+
+/* specialty explorer */
+let sel = "all";
+const tabs = document.getElementById("tabs"), list = document.getElementById("specList");
+const opts = [{k:"all",name:"All cities"},...cityList];
+tabs.innerHTML = opts.map(o=>{
+  const n = o.k==="all"?specialty.length:specialty.filter(s=>s[1].includes(o.k)).length;
+  return `<button class="tab" role="tab" data-k="${o.k}" aria-selected="${o.k===sel}">${o.name}<em>${n}</em></button>`;
+}).join("");
+function renderSpec(){
+  tabs.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.k===sel));
+  const items = specialty.filter(s=>sel==="all"||s[1].includes(sel));
+  list.innerHTML = items.map(s=>
+    `<article class="item"><h3>${s[0]}</h3><div class="pills">${s[1].map(k=>`<span class="pill">${names[k]}</span>`).join("")}</div></article>`).join("");
+}
+tabs.addEventListener("click",e=>{const b=e.target.closest(".tab"); if(b){sel=b.dataset.k; renderSpec();}});
+renderSpec();
+
+/* cities */
+document.getElementById("cityCards").innerHTML = cityList.map(c=>
+  `<article class="city" style="--c:${c.color}"><h3>${c.name}</h3><div class="big">${countFor(c.k)}</div><p>services available</p><a href="#schedule">Schedule in ${c.name}</a></article>`).join("");
+</script>
+</body>
+</html>
